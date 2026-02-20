@@ -57,12 +57,12 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-10">
           {navLinks.map((link) => (
             <a 
               key={link.name} 
               href={link.href}
-              className="text-[10px] uppercase tracking-widest hover:text-brand-taupe transition-colors"
+              className="text-xs uppercase tracking-widest hover:text-brand-taupe transition-colors font-medium"
             >
               {link.name}
             </a>
@@ -71,7 +71,7 @@ const Navbar = () => {
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-brand-ink text-white px-6 py-2 rounded-full text-[10px] uppercase tracking-widest hover:bg-brand-taupe transition-all duration-300"
+            className="bg-brand-ink text-white px-8 py-2.5 rounded-full text-xs uppercase tracking-widest hover:bg-brand-taupe transition-all duration-300 font-medium"
           >
             Boek Nu
           </a>
@@ -134,28 +134,28 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-[10px] uppercase tracking-[0.3em] text-brand-taupe mb-4 block">
+          <span className="text-xs uppercase tracking-[0.3em] text-brand-taupe mb-6 block font-medium">
             Boutique Beauty Studio • Oostkamp
           </span>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif mb-6 leading-tight">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif mb-8 leading-tight">
             Jouw nagels, <br />
             <span className="italic">maar beter.</span>
           </h1>
-          <p className="text-base md:text-lg text-brand-taupe font-light mb-10 max-w-xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-brand-taupe font-light mb-12 max-w-2xl mx-auto leading-relaxed">
             Verfijnde en natuurlijke beauty voor de moderne vrouw die houdt van perfectie en minimalisme.
           </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <a 
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative bg-brand-ink text-white px-8 py-4 rounded-full text-xs uppercase tracking-widest overflow-hidden transition-all duration-300"
+              className="group relative bg-brand-ink text-white px-10 py-5 rounded-full text-sm uppercase tracking-widest overflow-hidden transition-all duration-300 font-medium"
             >
               Boek Je Afspraak
             </a>
             <a 
               href="#services"
-              className="text-xs uppercase tracking-widest border-b border-brand-taupe/30 pb-1 hover:border-brand-taupe transition-all"
+              className="text-sm uppercase tracking-widest border-b border-brand-taupe/30 pb-1 hover:border-brand-taupe transition-all font-medium"
             >
               Ontdek Diensten
             </a>
@@ -193,11 +193,11 @@ const About = () => {
           transition={{ duration: 0.8 }}
           className="order-1 md:order-2"
         >
-          <span className="text-[10px] uppercase tracking-widest text-brand-taupe mb-3 block">Het Verhaal</span>
-          <h2 className="text-3xl md:text-5xl font-serif mb-6 leading-tight">
+          <span className="text-xs uppercase tracking-widest text-brand-taupe mb-4 block font-medium">Het Verhaal</span>
+          <h2 className="text-4xl md:text-6xl font-serif mb-8 leading-tight">
             Verfijning in het hart van Oostkamp
           </h2>
-          <div className="space-y-4 text-brand-taupe font-light leading-relaxed text-sm md:text-base">
+          <div className="space-y-6 text-brand-taupe font-light leading-relaxed text-base md:text-lg">
             <p>
               Glow by Thai staat voor natuurlijke schoonheid en perfectie. Wij geloven dat de mooiste resultaten diegene zijn die aanvoelen als een betere versie van jezelf.
             </p>
@@ -206,14 +206,14 @@ const About = () => {
             </p>
           </div>
           
-          <div className="mt-8 flex gap-10">
+          <div className="mt-10 flex gap-12">
             <div>
-              <h4 className="font-serif text-xl mb-1">100%</h4>
-              <p className="text-[9px] uppercase tracking-widest text-brand-taupe">Focus op jou</p>
+              <h4 className="font-serif text-3xl mb-1">100%</h4>
+              <p className="text-xs uppercase tracking-widest text-brand-taupe font-medium">Focus op jou</p>
             </div>
             <div>
-              <h4 className="font-serif text-xl mb-1">Premium</h4>
-              <p className="text-[9px] uppercase tracking-widest text-brand-taupe">Producten</p>
+              <h4 className="font-serif text-3xl mb-1">Premium</h4>
+              <p className="text-xs uppercase tracking-widest text-brand-taupe font-medium">Producten</p>
             </div>
           </div>
         </motion.div>
@@ -236,15 +236,15 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, perfectFo
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group bg-brand-nude p-6 rounded-2xl border border-brand-beige hover:border-brand-taupe/20 transition-all duration-500 flex flex-col"
+      className="group bg-brand-nude p-10 rounded-3xl border border-brand-beige hover:border-brand-taupe/20 transition-all duration-500 flex flex-col"
     >
-      <h3 className="text-xl font-serif mb-3 group-hover:italic transition-all">{title}</h3>
-      <p className="text-xs text-brand-taupe font-light leading-relaxed mb-4 flex-grow">
+      <h3 className="text-2xl font-serif mb-4 group-hover:italic transition-all">{title}</h3>
+      <p className="text-sm text-brand-taupe font-light leading-relaxed mb-6 flex-grow">
         {description}
       </p>
-      <div className="pt-4 border-t border-brand-beige/50">
-        <p className="text-[9px] uppercase tracking-widest text-brand-taupe mb-1">Ideaal voor</p>
-        <p className="text-[11px] font-medium italic">{perfectFor}</p>
+      <div className="pt-6 border-t border-brand-beige/50">
+        <p className="text-xs uppercase tracking-widest text-brand-taupe mb-2 font-medium">Ideaal voor</p>
+        <p className="text-sm font-medium italic">{perfectFor}</p>
       </div>
     </motion.div>
   );
@@ -275,17 +275,17 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="pt-20 md:pt-32 pb-12 md:pb-16 px-6 relative">
+    <section id="services" className="py-24 md:py-40 px-6 relative">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <span className="text-[10px] uppercase tracking-widest text-brand-taupe mb-3 block">Onze Expertise</span>
-          <h2 className="text-4xl md:text-5xl font-serif">Diensten</h2>
+          <span className="text-xs uppercase tracking-widest text-brand-taupe mb-4 block font-medium">Onze Expertise</span>
+          <h2 className="text-5xl md:text-7xl font-serif">Diensten</h2>
         </motion.div>
         
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
@@ -318,26 +318,26 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 md:py-32 px-6 bg-white relative">
+    <section id="portfolio" className="py-24 md:py-40 px-6 bg-white relative">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4"
+          className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6"
         >
           <div>
-            <span className="text-[10px] uppercase tracking-widest text-brand-taupe mb-3 block">Visueel Verhaal</span>
-            <h2 className="text-4xl md:text-5xl font-serif">Portfolio</h2>
+            <span className="text-xs uppercase tracking-widest text-brand-taupe mb-4 block font-medium">Visueel Verhaal</span>
+            <h2 className="text-5xl md:text-7xl font-serif">Portfolio</h2>
           </div>
           <a 
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-[10px] uppercase tracking-widest group border-b border-transparent hover:border-brand-taupe transition-all pb-1"
+            className="flex items-center gap-3 text-xs uppercase tracking-widest group border-b border-transparent hover:border-brand-taupe transition-all pb-1 font-medium"
           >
-            <Instagram size={16} />
+            <Instagram size={18} />
             <span>@glow_by_thai</span>
           </a>
         </motion.div>
@@ -395,19 +395,19 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="pt-12 md:pt-16 pb-16 md:pb-24 px-6 bg-brand-nude">
+    <section className="pt-16 md:pt-24 pb-24 md:pb-40 px-6 bg-brand-nude">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="text-[10px] uppercase tracking-widest text-brand-taupe mb-3 block">Het Verschil</span>
-            <h2 className="text-3xl md:text-4xl font-serif mb-6">Waarom Glow by Thai?</h2>
+            <span className="text-xs uppercase tracking-widest text-brand-taupe mb-4 block font-medium">Het Verschil</span>
+            <h2 className="text-4xl md:text-6xl font-serif mb-8">Waarom Glow by Thai?</h2>
             
-            <div className="grid sm:grid-cols-2 gap-6 mt-10">
+            <div className="grid sm:grid-cols-2 gap-10 mt-12">
               {features.map((feature, index) => (
-                <div key={index} className="space-y-2">
+                <div key={index} className="space-y-4">
                   <div className="text-brand-taupe">{feature.icon}</div>
-                  <h4 className="font-serif text-lg">{feature.title}</h4>
-                  <p className="text-[11px] text-brand-taupe font-light leading-relaxed">
+                  <h4 className="font-serif text-2xl">{feature.title}</h4>
+                  <p className="text-sm text-brand-taupe font-light leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -416,17 +416,17 @@ const WhyChooseUs = () => {
           </div>
           
           <div className="flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[320px] md:max-w-[400px]">
-              <div className="aspect-square rounded-full overflow-hidden border-4 border-white shadow-xl">
+            <div className="relative w-full max-w-[360px] md:max-w-[480px]">
+              <div className="aspect-square rounded-full overflow-hidden border-8 border-white shadow-2xl">
                 <img 
                   src="/images/face.jpeg" 
                   alt="Thai - Glow by Thai" 
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-white px-6 py-4 rounded-xl shadow-lg hidden sm:block">
-                <p className="text-xl font-serif italic">Oostkamp</p>
-                <p className="text-[8px] uppercase tracking-widest text-brand-taupe">Boutique Beauty Studio</p>
+              <div className="absolute -bottom-6 -left-6 bg-white px-8 py-6 rounded-2xl shadow-xl hidden sm:block">
+                <p className="text-2xl font-serif italic">Oostkamp</p>
+                <p className="text-xs uppercase tracking-widest text-brand-taupe font-medium">Boutique Beauty Studio</p>
               </div>
             </div>
           </div>
@@ -456,7 +456,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-20 md:py-32 px-6 bg-white relative overflow-hidden">
+    <section id="testimonials" className="py-24 md:py-40 px-6 bg-white relative overflow-hidden">
       {/* Subtle background decoration */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-brand-beige to-transparent" />
       
@@ -466,13 +466,13 @@ const Testimonials = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <span className="text-[10px] uppercase tracking-widest text-brand-taupe mb-3 block">Reviews</span>
-          <h2 className="text-4xl md:text-5xl font-serif">Klantervaringen</h2>
+          <span className="text-xs uppercase tracking-widest text-brand-taupe mb-4 block font-medium">Reviews</span>
+          <h2 className="text-5xl md:text-7xl font-serif">Klantervaringen</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-10">
           {reviews.map((review, index) => (
             <motion.div
               key={index}
@@ -480,19 +480,19 @@ const Testimonials = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, delay: index * 0.15 }}
-              className="bg-brand-nude/40 backdrop-blur-sm p-10 rounded-[2rem] flex flex-col items-center text-center border border-brand-beige/30 hover:bg-brand-nude/60 transition-all duration-500"
+              className="bg-brand-nude/40 backdrop-blur-sm p-12 rounded-[2.5rem] flex flex-col items-center text-center border border-brand-beige/30 hover:bg-brand-nude/60 transition-all duration-500"
             >
-              <div className="flex gap-1 mb-6">
+              <div className="flex gap-1.5 mb-8">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={12} className="fill-brand-taupe text-brand-taupe" />
+                  <Star key={i} size={16} className="fill-brand-taupe text-brand-taupe" />
                 ))}
               </div>
-              <p className="text-sm text-brand-taupe font-light italic leading-relaxed mb-8">
+              <p className="text-base text-brand-taupe font-light italic leading-relaxed mb-10">
                 "{review.text}"
               </p>
               <div className="mt-auto">
-                <p className="font-serif text-lg mb-1">{review.name}</p>
-                <p className="text-[8px] uppercase tracking-widest text-brand-taupe">{review.service}</p>
+                <p className="font-serif text-xl mb-1.5">{review.name}</p>
+                <p className="text-xs uppercase tracking-widest text-brand-taupe font-medium">{review.service}</p>
               </div>
             </motion.div>
           ))}
@@ -504,28 +504,28 @@ const Testimonials = () => {
 
 const Booking = () => {
   return (
-    <section className="py-12 md:py-16 px-6 relative overflow-hidden">
+    <section className="py-20 md:py-32 px-6 relative overflow-hidden">
       <div className="absolute inset-0 z-0 bg-brand-beige/20" />
       
-      <div className="max-w-3xl mx-auto relative z-10 text-center">
+      <div className="max-w-4xl mx-auto relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white/60 backdrop-blur-md p-10 md:p-16 rounded-[2rem] border border-white/40 shadow-xl"
+          className="bg-white/60 backdrop-blur-md p-12 md:p-24 rounded-[3rem] border border-white/40 shadow-xl"
         >
-          <span className="text-[10px] uppercase tracking-widest text-brand-taupe mb-4 block">Klaar om te stralen?</span>
-          <h2 className="text-3xl md:text-5xl font-serif mb-6">Reserveer Je Glow</h2>
-          <p className="text-sm text-brand-taupe font-light mb-10 max-w-md mx-auto leading-relaxed">
+          <span className="text-xs uppercase tracking-widest text-brand-taupe mb-6 block font-medium">Klaar om te stralen?</span>
+          <h2 className="text-4xl md:text-6xl font-serif mb-8">Reserveer Je Glow</h2>
+          <p className="text-base md:text-lg text-brand-taupe font-light mb-12 max-w-lg mx-auto leading-relaxed">
             Beleef de perfecte beauty ervaring in onze boutique studio. Afspraken zijn beperkt, boek tijdig online.
           </p>
           <a 
             href={BOOKING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-brand-ink text-white px-10 py-4 rounded-full text-xs uppercase tracking-widest hover:bg-brand-taupe transition-all duration-300 shadow-lg"
+            className="inline-flex items-center gap-4 bg-brand-ink text-white px-12 py-5 rounded-full text-sm uppercase tracking-widest hover:bg-brand-taupe transition-all duration-300 shadow-lg font-medium"
           >
-            <Calendar size={18} />
+            <Calendar size={20} />
             <span>Boek Online</span>
           </a>
         </motion.div>
@@ -536,48 +536,48 @@ const Booking = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-brand-ink text-white py-12 px-6">
+    <footer className="bg-brand-ink text-white py-20 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-10 mb-10">
+        <div className="grid md:grid-cols-3 gap-16 mb-16">
           <div>
-            <a href="#" className="text-xl font-serif tracking-widest uppercase mb-4 block">
+            <a href="#" className="text-2xl font-serif tracking-widest uppercase mb-6 block">
               Glow <span className="text-brand-beige/50">by</span> Thai
             </a>
-            <p className="text-brand-beige/40 font-light text-xs max-w-xs leading-relaxed">
+            <p className="text-brand-beige/40 font-light text-sm max-w-xs leading-relaxed">
               Boutique beauty studio in Oostkamp voor natuurlijke verfijning.
             </p>
           </div>
           
           <div>
-            <h5 className="text-[10px] uppercase tracking-widest mb-4 font-semibold">Locatie</h5>
-            <p className="text-brand-beige/40 font-light text-xs">
+            <h5 className="text-xs uppercase tracking-widest mb-6 font-semibold">Locatie</h5>
+            <p className="text-brand-beige/40 font-light text-sm">
               Oostkamp, België<br />
               Enkel op afspraak
             </p>
           </div>
           
           <div>
-            <h5 className="text-[10px] uppercase tracking-widest mb-4 font-semibold">Contact</h5>
-            <div className="flex gap-6">
-              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-brand-beige/40 hover:text-white transition-colors text-xs flex items-center gap-2">
-                <Instagram size={14} />
+            <h5 className="text-xs uppercase tracking-widest mb-6 font-semibold">Contact</h5>
+            <div className="flex gap-8">
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-brand-beige/40 hover:text-white transition-colors text-sm flex items-center gap-2">
+                <Instagram size={18} />
                 Instagram
               </a>
-              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="text-brand-beige/40 hover:text-white transition-colors text-xs flex items-center gap-2">
-                <Calendar size={14} />
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="text-brand-beige/40 hover:text-white transition-colors text-sm flex items-center gap-2">
+                <Calendar size={18} />
                 Boek Nu
               </a>
             </div>
           </div>
         </div>
         
-        <div className="pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[9px] uppercase tracking-widest text-brand-beige/30">
+        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-xs uppercase tracking-widest text-brand-beige/30">
             © {new Date().getFullYear()} Glow by Thai.
           </p>
-          <div className="flex gap-6">
-            <a href="#" className="text-[9px] uppercase tracking-widest text-brand-beige/30 hover:text-white">Privacy</a>
-            <a href="#" className="text-[9px] uppercase tracking-widest text-brand-beige/30 hover:text-white">Terms</a>
+          <div className="flex gap-8">
+            <a href="#" className="text-xs uppercase tracking-widest text-brand-beige/30 hover:text-white transition-colors">Privacy</a>
+            <a href="#" className="text-xs uppercase tracking-widest text-brand-beige/30 hover:text-white transition-colors">Terms</a>
           </div>
         </div>
       </div>
