@@ -40,8 +40,8 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Diensten', href: '#services' },
     { name: 'Over ons', href: '#about' },
+    { name: 'Diensten', href: '#services' },
     { name: 'Portfolio', href: '#portfolio' },
     { name: 'Reviews', href: '#testimonials' },
   ];
@@ -179,7 +179,7 @@ const About = () => {
         >
           <div className="aspect-[3/4] md:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl w-full max-w-md mx-auto">
             <img 
-              src="https://ddqhrvesrqlfjjtciwsr.supabase.co/storage/v1/object/public/nagelsalon/Gemini_Generated_Image_phk83sphk83sphk8.png" 
+              src="https://ddqhrvesrqlfjjtciwsr.supabase.co/storage/v1/object/public/nagelsalon/Gemini_Generated_Image_phk83sphk83sphk8%20(1)%20(1).png" 
               alt="Thai - Lumière nail studio" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
