@@ -544,48 +544,48 @@ const Booking = () => {
 
 const Footer = () => {
   return (
-    <footer className="bg-brand-ink text-white py-20 px-6">
+    <footer className="bg-brand-ink text-white py-12 px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-16 mb-16">
+        <div className="grid md:grid-cols-3 gap-10 mb-10">
           <div>
-            <a href="#" className="text-2xl font-serif tracking-widest uppercase mb-6 block">
+            <a href="#" className="text-xl font-serif tracking-widest uppercase mb-4 block">
               Lumière <span className="text-brand-beige/50">nail</span> studio
             </a>
-            <p className="text-brand-beige/40 font-light text-sm max-w-xs leading-relaxed">
+            <p className="text-brand-beige/40 font-light text-xs max-w-xs leading-relaxed">
               Boutique beauty studio in Kortrijk voor natuurlijke verfijning.
             </p>
           </div>
           
           <div>
-            <h5 className="text-xs uppercase tracking-widest mb-6 font-semibold">Locatie</h5>
-            <p className="text-brand-beige/40 font-light text-sm">
+            <h5 className="text-[10px] uppercase tracking-widest mb-4 font-semibold text-brand-beige/60">Locatie</h5>
+            <p className="text-brand-beige/40 font-light text-xs">
               Kortrijk, België<br />
               Enkel op afspraak
             </p>
           </div>
           
           <div>
-            <h5 className="text-xs uppercase tracking-widest mb-6 font-semibold">Contact</h5>
-            <div className="flex gap-8">
-              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-brand-beige/40 hover:text-white transition-colors text-sm flex items-center gap-2">
-                <Instagram size={18} />
+            <h5 className="text-[10px] uppercase tracking-widest mb-4 font-semibold text-brand-beige/60">Contact</h5>
+            <div className="flex gap-6">
+              <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer" className="text-brand-beige/40 hover:text-white transition-colors text-xs flex items-center gap-2">
+                <Instagram size={16} />
                 Instagram
               </a>
-              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="text-brand-beige/40 hover:text-white transition-colors text-sm flex items-center gap-2">
-                <Calendar size={18} />
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="text-brand-beige/40 hover:text-white transition-colors text-xs flex items-center gap-2">
+                <Calendar size={16} />
                 Boek Nu
               </a>
             </div>
           </div>
         </div>
         
-        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-xs uppercase tracking-widest text-brand-beige/30">
+        <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-[10px] uppercase tracking-widest text-brand-beige/20">
             © {new Date().getFullYear()} Lumière nail studio.
           </p>
-          <div className="flex gap-8">
-            <a href="#" className="text-xs uppercase tracking-widest text-brand-beige/30 hover:text-white transition-colors">Privacy</a>
-            <a href="#" className="text-xs uppercase tracking-widest text-brand-beige/30 hover:text-white transition-colors">Terms</a>
+          <div className="flex gap-6">
+            <a href="#" className="text-[10px] uppercase tracking-widest text-brand-beige/20 hover:text-white transition-colors">Privacy</a>
+            <a href="#" className="text-[10px] uppercase tracking-widest text-brand-beige/20 hover:text-white transition-colors">Terms</a>
           </div>
         </div>
       </div>
