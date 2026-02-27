@@ -24,8 +24,8 @@ function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-const INSTAGRAM_URL = "https://www.instagram.com/glow_by_thai/";
-const BOOKING_URL = "https://booking.optios.net/20771/menu";
+const INSTAGRAM_URL = "https://www.instagram.com/oskarlebon/";
+const BOOKING_URL = "https://www.instagram.com/oskarlebon/";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -53,7 +53,7 @@ const Navbar = () => {
     )}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <a href="#" className="text-xl md:text-2xl font-serif tracking-widest uppercase">
-          Glow <span className="text-brand-taupe">by</span> Thai
+          Lumière <span className="text-brand-taupe">nail</span> studio
         </a>
 
         {/* Desktop Nav */}
@@ -135,7 +135,7 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
         >
           <span className="text-xs uppercase tracking-[0.3em] text-brand-taupe mb-6 block font-medium">
-            Boutique Beauty Studio • Oostkamp
+            Boutique Beauty Studio • Kortrijk
           </span>
           <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif mb-8 leading-tight">
             Jouw nagels, <br />
@@ -179,9 +179,10 @@ const About = () => {
         >
           <div className="aspect-[3/4] md:aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl w-full max-w-md mx-auto">
             <img 
-              src="/images/logo.jpeg" 
-              alt="Glow by Thai Logo" 
-              className="w-full h-full object-contain bg-brand-nude"
+              src="https://ddqhrvesrqlfjjtciwsr.supabase.co/storage/v1/object/public/nagelsalon/Gemini_Generated_Image_phk83sphk83sphk8.png" 
+              alt="Thai - Lumière nail studio" 
+              className="w-full h-full object-cover"
+              referrerPolicy="no-referrer"
             />
           </div>
         </motion.div>
@@ -195,14 +196,14 @@ const About = () => {
         >
           <span className="text-xs uppercase tracking-widest text-brand-taupe mb-4 block font-medium">Het Verhaal</span>
           <h2 className="text-4xl md:text-6xl font-serif mb-8 leading-tight">
-            Verfijning in het hart van Oostkamp
+            Verfijning in het hart van Kortrijk
           </h2>
           <div className="space-y-6 text-brand-taupe font-light leading-relaxed text-base md:text-lg">
             <p>
-              Glow by Thai staat voor natuurlijke schoonheid en perfectie. Wij geloven dat de mooiste resultaten diegene zijn die aanvoelen als een betere versie van jezelf.
+              Lumière nail studio staat voor natuurlijke schoonheid en perfectie. Wij geloven dat de mooiste resultaten diegene zijn die aanvoelen als een betere versie van jezelf.
             </p>
             <p>
-              In onze boutique studio in Oostkamp focussen we op precisie, hygiëne en een minimalistische esthetiek. Geen drukke salon, maar een persoonlijke ervaring waar jij centraal staat.
+              In onze boutique studio in Kortrijk focussen we op precisie, hygiëne en een minimalistische esthetiek. Geen drukke salon, maar een persoonlijke ervaring waar jij centraal staat.
             </p>
           </div>
           
@@ -236,15 +237,21 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, perfectFo
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="group bg-brand-nude p-10 rounded-3xl border border-brand-beige hover:border-brand-taupe/20 transition-all duration-500 flex flex-col"
+      className="group bg-white p-10 rounded-[2.5rem] border border-brand-beige/40 hover:border-brand-taupe/30 hover:shadow-2xl hover:shadow-brand-taupe/5 transition-all duration-700 flex flex-col relative overflow-hidden"
     >
-      <h3 className="text-2xl font-serif mb-4 group-hover:italic transition-all">{title}</h3>
-      <p className="text-sm text-brand-taupe font-light leading-relaxed mb-6 flex-grow">
-        {description}
-      </p>
-      <div className="pt-6 border-t border-brand-beige/50">
-        <p className="text-xs uppercase tracking-widest text-brand-taupe mb-2 font-medium">Ideaal voor</p>
-        <p className="text-sm font-medium italic">{perfectFor}</p>
+      <div className="absolute top-0 right-0 p-8 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-700">
+        <span className="text-8xl font-serif leading-none">0{index + 1}</span>
+      </div>
+      
+      <div className="relative z-10">
+        <h3 className="text-2xl md:text-3xl font-serif mb-6 group-hover:text-brand-taupe transition-colors duration-500">{title}</h3>
+        <p className="text-base text-brand-taupe font-light leading-relaxed mb-10 flex-grow">
+          {description}
+        </p>
+        <div className="pt-8 border-t border-brand-beige/30">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-brand-taupe/60 mb-3 font-semibold">Ideaal voor</p>
+          <p className="text-sm font-medium italic text-brand-ink/80">{perfectFor}</p>
+        </div>
       </div>
     </motion.div>
   );
@@ -275,7 +282,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="py-24 md:py-40 px-6 relative">
+    <section id="services" className="py-24 md:py-40 px-6 relative bg-brand-nude/30">
       <div className="max-w-7xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -309,12 +316,12 @@ const Services = () => {
 
 const Portfolio = () => {
   const images = [
-    "/images/SaveClip.App_525411260_17967007754934198_560237891442298755_n.jpg",
-    "/images/SaveClip.App_527449235_17967666572934198_579534202566866219_n.jpg",
-    "/images/SaveClip.App_564966776_17976267386934198_7481806575206015230_n.jpg",
-    "/images/SaveClip.App_572889606_17977681076934198_1847128962047203715_n.jpg",
-    "/images/SaveClip.App_576006096_17978764124934198_2504130075196160415_n.jpg",
-    "/images/SaveClip.App_586695615_17982189431934198_5155461450697461730_n.jpg",
+    "https://ddqhrvesrqlfjjtciwsr.supabase.co/storage/v1/object/public/nagelsalon/nails/Gemini_Generated_Image_d7wxv9d7wxv9d7wx.png",
+    "https://ddqhrvesrqlfjjtciwsr.supabase.co/storage/v1/object/public/nagelsalon/nails/Gemini_Generated_Image_fwt7bvfwt7bvfwt7.png",
+    "https://ddqhrvesrqlfjjtciwsr.supabase.co/storage/v1/object/public/nagelsalon/nails/Gemini_Generated_Image_jyfva1jyfva1jyfv.png",
+    "https://ddqhrvesrqlfjjtciwsr.supabase.co/storage/v1/object/public/nagelsalon/nails/Gemini_Generated_Image_kjpad1kjpad1kjpa.png",
+    "https://ddqhrvesrqlfjjtciwsr.supabase.co/storage/v1/object/public/nagelsalon/nails/Gemini_Generated_Image_sqc2jlsqc2jlsqc2.png",
+    "https://ddqhrvesrqlfjjtciwsr.supabase.co/storage/v1/object/public/nagelsalon/nails/Gemini_Generated_Image_vb2ntbvb2ntbvb2n.png",
   ];
 
   return (
@@ -338,7 +345,7 @@ const Portfolio = () => {
             className="flex items-center gap-3 text-xs uppercase tracking-widest group border-b border-transparent hover:border-brand-taupe transition-all pb-1 font-medium"
           >
             <Instagram size={18} />
-            <span>@glow_by_thai</span>
+            <span>@lumiere_nailstudio</span>
           </a>
         </motion.div>
 
@@ -356,6 +363,7 @@ const Portfolio = () => {
                 src={img} 
                 alt={`Portfolio ${index + 1}`} 
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-brand-ink/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </motion.div>
@@ -399,7 +407,7 @@ const WhyChooseUs = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <span className="text-xs uppercase tracking-widest text-brand-taupe mb-4 block font-medium">Het Verschil</span>
-            <h2 className="text-4xl md:text-6xl font-serif mb-8">Waarom Glow by Thai?</h2>
+            <h2 className="text-4xl md:text-6xl font-serif mb-8">Waarom Lumière nail studio?</h2>
             
             <div className="grid sm:grid-cols-2 gap-10 mt-12">
               {features.map((feature, index) => (
@@ -418,13 +426,14 @@ const WhyChooseUs = () => {
             <div className="relative w-full max-w-[360px] md:max-w-[480px]">
               <div className="aspect-square rounded-full overflow-hidden border-8 border-white shadow-2xl">
                 <img 
-                  src="/images/face.jpeg" 
-                  alt="Thai - Glow by Thai" 
+                  src="https://ddqhrvesrqlfjjtciwsr.supabase.co/storage/v1/object/public/nagelsalon/Gemini_Generated_Image_fu012ffu012ffu01.png" 
+                  alt="Thai - Lumière nail studio" 
                   className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white px-8 py-6 rounded-2xl shadow-xl hidden sm:block">
-                <p className="text-2xl font-serif italic">Oostkamp</p>
+                <p className="text-2xl font-serif italic">Kortrijk</p>
                 <p className="text-xs uppercase tracking-widest text-brand-taupe font-medium">Boutique Beauty Studio</p>
               </div>
             </div>
@@ -444,7 +453,7 @@ const Testimonials = () => {
     },
     {
       name: "Emma L.",
-      text: "Prachtig resultaat van mijn lash lift. Heel natuurlijk en precies wat ik zocht. Een echte aanrader in Oostkamp.",
+      text: "Prachtig resultaat van mijn lash lift. Heel natuurlijk en precies wat ik zocht. Een echte aanrader in Kortrijk.",
       service: "Lash Lift"
     },
     {
@@ -540,17 +549,17 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-16 mb-16">
           <div>
             <a href="#" className="text-2xl font-serif tracking-widest uppercase mb-6 block">
-              Glow <span className="text-brand-beige/50">by</span> Thai
+              Lumière <span className="text-brand-beige/50">nail</span> studio
             </a>
             <p className="text-brand-beige/40 font-light text-sm max-w-xs leading-relaxed">
-              Boutique beauty studio in Oostkamp voor natuurlijke verfijning.
+              Boutique beauty studio in Kortrijk voor natuurlijke verfijning.
             </p>
           </div>
           
           <div>
             <h5 className="text-xs uppercase tracking-widest mb-6 font-semibold">Locatie</h5>
             <p className="text-brand-beige/40 font-light text-sm">
-              Oostkamp, België<br />
+              Kortrijk, België<br />
               Enkel op afspraak
             </p>
           </div>
@@ -572,7 +581,7 @@ const Footer = () => {
         
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-xs uppercase tracking-widest text-brand-beige/30">
-            © {new Date().getFullYear()} Glow by Thai.
+            © {new Date().getFullYear()} Lumière nail studio.
           </p>
           <div className="flex gap-8">
             <a href="#" className="text-xs uppercase tracking-widest text-brand-beige/30 hover:text-white transition-colors">Privacy</a>
